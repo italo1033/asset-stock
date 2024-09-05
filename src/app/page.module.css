@@ -1,4 +1,13 @@
 .containerPrincipal{
   display: flex;
   flex-direction: row;
+  width: 100%;
+}
+
+.containerSideBar{
+  width: 21rem;
+}
+
+.containerPainel{
+  width: 100%;
 }
