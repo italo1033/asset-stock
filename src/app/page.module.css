@@ -1,0 +1,4 @@
+.containerPrincipal{
+  display: flex;
+  flex-direction: row;
+}
