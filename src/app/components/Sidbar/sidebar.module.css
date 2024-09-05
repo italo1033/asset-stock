@@ -1,0 +1,34 @@
+.sidebar {
+  width: 21rem;
+  background-color: #fff;
+  color: #000;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+}
+
+.menuItem {
+  padding: 15px;
+  cursor: pointer;
+}
+
+.menuItem:hover {
+  background-color: #f8f8fa;
+}
+
+.submenu {
+  padding-left: 20px;
+}
+
+.submenuItem {
+  display: block;
+  color: #5b5c63;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+.submenuItem:hover {
+  color: #fff;
+}
