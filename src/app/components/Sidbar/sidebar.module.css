@@ -2,10 +2,16 @@
   display: flex;
   flex-direction: column;
   width: 18rem;
-  background-color: red;
+  background-color: #fff;
   color: #000;
   height: 100vh;
-  padding-top: 20px;
+}
+.sidebarheader{
+  height: 4rem;
+}
+
+.sidebarmenu{
+  height: 100%;
 }
 
 .menuItem {
