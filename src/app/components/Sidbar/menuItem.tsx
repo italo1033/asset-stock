@@ -5,9 +5,10 @@ import styles from './sidebar.module.css';
 interface MenuItemProps {
     title: string;
     submenu: string[];
+    onButtonClickMenuItem: (item: string) => void;
 }
 
-const MenuItem: React.FC<MenuItemProps> = ({ title, submenu }) => {
+const MenuItem: React.FC<MenuItemProps> = ({ title, submenu, onButtonClickMenuItem }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleSubMenu = () => {
@@ -22,9 +23,13 @@ const MenuItem: React.FC<MenuItemProps> = ({ title, submenu }) => {
             {isOpen && (
                 <div className={styles.submenu}>
                     {submenu.map((item, index) => (
-                        <a href="#" key={index} className={styles.submenuItem}>
+                        <button 
+                            key={index} 
+                            className={styles.submenuItem} 
+                            onClick={() => onButtonClickMenuItem(item)}
+                        >
                             {item}
-                        </a>
+                        </button>
                     ))}
                 </div>
             )}
@@ -32,4 +37,4 @@ const MenuItem: React.FC<MenuItemProps> = ({ title, submenu }) => {
     );
 };
 
-export default MenuItem
+export default MenuItem;
