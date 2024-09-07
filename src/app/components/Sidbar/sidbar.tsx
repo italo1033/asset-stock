@@ -18,32 +18,15 @@ const Sidebar: React.FC<ButtonComponentProps> = ({ onButtonClickSidebar }) => {
 
   return (
     <div className={styles.sidebar}>
-      <header>
+      <header className={styles.sidebarheader}>
         Logo
       </header>
 
-      <menu>
+      <menu className={styles.sidebarmenu}>
         <MenuItem title="Item 1" submenu={['Subitem 1.1', 'Subitem 1.2']} onButtonClickMenuItem={handleButtonClick} />
         <MenuItem title="Item 2" submenu={['Subitem 2.1', 'Subitem 2.2']} onButtonClickMenuItem={handleButtonClick} />
         <MenuItem title="Item 3" submenu={['Subitem 3.1', 'Subitem 3.2']} onButtonClickMenuItem={handleButtonClick} />
       </menu>
-
-      <footer>
-        <div>
-          <div>
-            <div>imagem</div>
-            <div>
-              <span>Usuario123</span>
-              <span>Admin</span>
-            </div>
-          </div>
-
-          <div>
-            <button>Settings</button>
-            <button>Logout</button>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
