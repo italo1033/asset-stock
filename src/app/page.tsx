@@ -10,7 +10,7 @@ export default function Home() {
 
   const renderComponent = () => {
     switch (currentComponent) {
-      case 'Subitem 1.1':
+      case 'Lista de Colaboradores':
         return <div>Componente para Subitem 1.1</div>;
       case 'Subitem 1.2':
         return <div>Componente para Subitem 1.2</div>;
