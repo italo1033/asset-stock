@@ -23,9 +23,10 @@ const Sidebar: React.FC<ButtonComponentProps> = ({ onButtonClickSidebar }) => {
       </header>
 
       <menu className={styles.sidebarmenu}>
-        <MenuItem title="Item 1" submenu={['Subitem 1.1', 'Subitem 1.2']} onButtonClickMenuItem={handleButtonClick} />
-        <MenuItem title="Item 2" submenu={['Subitem 2.1', 'Subitem 2.2']} onButtonClickMenuItem={handleButtonClick} />
-        <MenuItem title="Item 3" submenu={['Subitem 3.1', 'Subitem 3.2']} onButtonClickMenuItem={handleButtonClick} />
+        <MenuItem title="Colaboradores" submenu={['Lista de Colaboradores', 'Adicionar Colaborador', 'Atualizar Colaborador' ,'Excluir Colaborador']} onButtonClickMenuItem={handleButtonClick} />
+        <MenuItem title="Estoque" submenu={['Equipamentos', 'Adicionar Equipamento']} onButtonClickMenuItem={handleButtonClick} />
+        <MenuItem title="Despesas" submenu={['Visualizar Despesas', 'Adicionar Despesas']} onButtonClickMenuItem={handleButtonClick} />
+        <MenuItem title="Serviços" submenu={['Visualizar Serviços', 'Criar Ordem de serviço']} onButtonClickMenuItem={handleButtonClick} />
       </menu>
     </div>
   );
