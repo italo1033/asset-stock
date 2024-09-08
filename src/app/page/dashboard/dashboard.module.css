@@ -12,6 +12,9 @@
     height: 16rem;
     background-color: #d71717;
     border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    gap:  1.48rem;;
 }
 
 .containersubcards{
