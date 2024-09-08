@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./cardinfor.module.css";
 
 export default function CardInfor({ valor, texto }: { valor: number; texto: string }) {
