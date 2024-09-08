@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './dashboard.module.css';
 import SalesGraphic from '@/app/components/GraficPage/SalesGraphic';
+import CardInfor from '@/app/components/Cardinfor/cardinfor';
 
 
 const Dashboard: React.FC<any> = () => {
@@ -9,7 +10,10 @@ const Dashboard: React.FC<any> = () => {
   return (
     <section className={styles.dashboard}>
         <div className={styles.dashboardMetas}>
-
+          <CardInfor texto='verde' valor={1000} />
+          <CardInfor texto='verde' valor={1000} />
+          <CardInfor texto='verde' valor={1000} />
+          <CardInfor texto='verde' valor={1000} />
         </div>
 
         <div className={styles.containersubcards}>
