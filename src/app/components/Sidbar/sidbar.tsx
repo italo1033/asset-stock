@@ -19,7 +19,7 @@ const Sidebar: React.FC<ButtonComponentProps> = ({ onButtonClickSidebar }) => {
   return (
     <div className={styles.sidebar}>
       <header className={styles.sidebarheader}>
-        Logo
+        Asset Stock
       </header>
 
       <menu className={styles.sidebarmenu}>
