@@ -37,3 +37,12 @@
 .submenuItem:hover {
   color: #fff;
 }
+
+.submenuItem{
+  border: none;
+  background-color: transparent;
+}
+
+.submenuItem:hover{
+  color:blue;
+}
