@@ -4,6 +4,7 @@ import { useState } from 'react';
 import styles from './page.module.css';
 import Sidebar from './components/Sidbar/sidbar';
 import Navbar from './components/Navbar/navbar';
+import Dashboard from './page/dashboard/dashboard';
 
 export default function Home() {
   const [currentComponent, setCurrentComponent] = useState<string | null>(null);
@@ -23,7 +24,7 @@ export default function Home() {
       case 'Subitem 3.2':
         return <div>Componente para Subitem 3.2</div>;
       default:
-        return <div>Selecione um item do submenu</div>;
+        return <Dashboard />;
     }
   };
 
