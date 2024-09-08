@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .card {
+    width: 350px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    justify-content: space-between; /* Espaço entre o gráfico e o texto */
+  }
+  
+  .chartContainer {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px; /* Espaçamento à direita do gráfico */
+  }
+  
+  .amountText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2b2f38;
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .infoItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+  }
+  
+  .value {
+    margin-left: auto;
+    font-weight: bold;
+  }
+  
+  

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styles from './dashboard.module.css';
+import SalesGraphic from '@/app/components/GraficPage/SalesGraphic';
+
 
 const Dashboard: React.FC<any> = () => {
 
@@ -11,7 +13,9 @@ const Dashboard: React.FC<any> = () => {
         </div>
 
         <div className={styles.containersubcards}>
-          <div>1</div>
+          <div>
+          <SalesGraphic Profit={100} Expanse={100} />
+          </div>
           <div>2</div>
           <div>2</div>
         </div>
