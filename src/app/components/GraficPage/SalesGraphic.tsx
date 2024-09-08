@@ -12,18 +12,18 @@ export default function SalesGraphic({ Profit, Expanse }: { Profit: number; Expa
     labels: ["Profit", "Expanse"],
     datasets: [
       {
-        data: [Profit, Expanse], // Valores do gráfico
-        backgroundColor: ["#6366F1", "#2DD4BF"], // Cores do gráfico
+        data: [Profit, Expanse],
+        backgroundColor: ["#6366F1", "#2DD4BF"], 
         borderWidth: 0,
       },
     ],
   };
 
   const options = {
-    cutout: "70%", // Tamanho do centro vazio do gráfico
+    cutout: "70%",
     plugins: {
       legend: {
-        display: false, // Oculta a legenda padrão
+        display: false, 
       },
     },
   };
@@ -31,7 +31,9 @@ export default function SalesGraphic({ Profit, Expanse }: { Profit: number; Expa
   return (
     <div className={styles.container}>
       <div className={styles.card}>
-        <h3 className={styles.title}>Sales Overview</h3>
+        <div className={styles.contentTitle} >
+          <h3 className={styles.title}>Sales Overview</h3>
+        </div>
         <div className={styles.content}>
           <div className={styles.chartContainer}>
             <Doughnut data={data} options={options} />
