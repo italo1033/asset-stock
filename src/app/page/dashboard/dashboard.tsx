@@ -6,6 +6,7 @@ const Dashboard: React.FC<any> = () => {
 
   return (
     <section className={styles.dashboard}>
+        ola mundo
     </section>
   );
 };
