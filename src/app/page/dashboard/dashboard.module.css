@@ -1,0 +1,57 @@
+.dashboard{
+    margin-left: 1.48rem;;
+    margin-top: 1.48rem;;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.48rem;;
+}
+
+.dashboardMetas{
+    width: 100%;
+    height: 16rem;
+    background-color: #d71717;
+    border-radius: 20px;
+}
+
+.containersubcards{
+    width: 100%;
+    height: 16rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.48rem;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.containersubcards > div{
+    background-color: blue;
+    border-radius: 20px;
+    width: 31.9%;
+}
+
+.containerfinal{
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.48rem;
+    align-items: stretch;
+}
+
+.item1{
+    width: 66%;
+    background-color: blue;
+    border-radius: 20px;
+}
+
+.item2{
+    width: 31.9%;
+    background-color: blue;
+    border-radius: 20px;
+}
+
+
+
