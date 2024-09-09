@@ -13,10 +13,11 @@ const Dashboard: React.FC<any> = () => {
   return (
     <section className={styles.dashboard}>
         <div className={styles.dashboardMetas}>
-          <CardInfor texto='verde' valor={1000} />
-          <CardInfor texto='verde' valor={1000} />
-          <CardInfor texto='verde' valor={1000} />
-          <CardInfor texto='verde' valor={1000} />
+          <CardInfor texto='Ativos em uso' valor={500} />
+          <CardInfor texto='Estoque' valor={300} />
+          <CardInfor texto='Serviços' valor={30} />
+          <CardInfor texto='Serviços Abertos' valor={5} />
+          <CardInfor texto='Total de Despesas' valor={1500} />
         </div>
 
         <div className={styles.containersubcards}>
