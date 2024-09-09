@@ -29,7 +29,7 @@
 }
 
 .containersubcards > div{
-    background-color: blue;
+    background-color: #fff;
     border-radius: 20px;
     width: 31.9%;
 }
@@ -46,13 +46,12 @@
 
 .item1{
     width: 66%;
-    background-color: blue;
+    background-color: #fff;
     border-radius: 20px;
 }
 
 .item2{
     width: 31.9%;
-    background-color: blue;
     border-radius: 20px;
 }
 
