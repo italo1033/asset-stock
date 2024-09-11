@@ -173,6 +173,26 @@ export default function UserRegistrationPage() {
               placeholder="Digite seu CEP"
             />
           </div>
+          <div className={styles.inputGroup}>
+            <label className={styles.label}>Cargo</label>
+            <input
+              name="cargo"
+              type="text"
+              required
+              className={styles.input}
+              placeholder="Digite seu cargo"
+            />
+          </div>
+          <div className={styles.inputGroup}>
+            <label className={styles.label}>Função</label>
+            <input
+              name="função"
+              type="text"
+              required
+              className={styles.input}
+              placeholder="Digite seu função"
+            />
+          </div>
 
           <div className={styles.buttonContainer}>
             <button type="button" className={styles.button}>
