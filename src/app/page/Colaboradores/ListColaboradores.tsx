@@ -20,7 +20,7 @@ const ListColaboradores: React.FC<any> = () => {
                             <li style={{width:'20%', color: "#9da2b7"}}>{item.Categoria}</li>
                             <li style={{width:'20%', color: "#9da2b7"}}>{item.Data}</li>
                         </ul>
-                    ))}
+                ))}
             </div>
     </section>
   );
