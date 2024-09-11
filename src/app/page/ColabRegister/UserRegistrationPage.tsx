@@ -104,7 +104,7 @@ export default function UserRegistrationPage() {
               type="text"
               required
               className={styles.input}
-              placeholder="Digite seu CPF ou CNPJ"
+              placeholder="Digite seu CPF"
             />
           </div>
 
