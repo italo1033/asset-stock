@@ -5,6 +5,7 @@ import styles from './page.module.css';
 import Sidebar from './components/Sidbar/sidbar';
 import Navbar from './components/Navbar/navbar';
 import Dashboard from './page/dashboard/dashboard';
+import ListColaboradores from './page/Colaboradores/ListColaboradores';
 
 export default function Home() {
   const [currentComponent, setCurrentComponent] = useState<string | null>(null);
@@ -12,8 +13,8 @@ export default function Home() {
   const renderComponent = () => {
     switch (currentComponent) {
       case 'Lista de Colaboradores':
-        return <div>Componente para Subitem 1.1</div>;
-      case 'Subitem 1.2':
+        return <ListColaboradores />;
+      case 'Adicionar Colaborador':
         return <div>Componente para Subitem 1.2</div>;
       case 'Subitem 2.1':
         return <div>Componente para Subitem 2.1</div>;
