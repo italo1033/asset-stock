@@ -1,19 +1,25 @@
-"use client"
-
+'use client'
 import { useState } from 'react';
 import styles from './page.module.css';
 import Sidebar from './components/Sidbar/sidbar';
 import Navbar from './components/Navbar/navbar';
 import Dashboard from './page/dashboard/dashboard';
-import List from './page/List/List';
+import ListColaboradores from './page/List/ListColaboradores';
+import LastExpenses from './components/LastExpenses/lastExpenses';
+import ListDespesas from './page/List/ListDespesas';
+import UserRegistrationPage from './page/ColabRegister/UserRegistrationPage';
 
 export default function Home() {
   const [currentComponent, setCurrentComponent] = useState<string | null>(null);
 
+  const handleViewAllExpenses = () => {
+    setCurrentComponent('Todas Despesas');
+  };
+
   const renderComponent = () => {
     switch (currentComponent) {
       case 'Lista de Colaboradores':
-        return <List
+        return <ListColaboradores
                 Atributo1="Id"
                 Atributo2="Nome"
                 Atributo3="Cargo"
@@ -21,18 +27,16 @@ export default function Home() {
                 Atributo5="Equipamento"
                 typeSolicitação="colaboradores"
                 />;
+      case 'Todas Despesas':
+        return <ListDespesas 
+        Atributo1="Id"
+        Atributo2="valor"
+        Atributo3="descricao" />;
+
       case 'Adicionar Colaborador':
-        return <div>Componente para Subitem 1.2</div>;
-      case 'Subitem 2.1':
-        return <div>Componente para Subitem 2.1</div>;
-      case 'Subitem 2.2':
-        return <div>Componente para Subitem 2.2</div>;
-      case 'Subitem 3.1':
-        return <div>Componente para Subitem 3.1</div>;
-      case 'Subitem 3.2':
-        return <div>Componente para Subitem 3.2</div>;
+        return <UserRegistrationPage />;
       default:
-        return <Dashboard />;
+        return <Dashboard onButtonClickDespesa={handleViewAllExpenses} />;
     }
   };
 
