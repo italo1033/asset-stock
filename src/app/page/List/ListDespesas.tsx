@@ -6,27 +6,21 @@ interface Props {
   Atributo1: string;
   Atributo2: string;
   Atributo3: string;
-  Atributo4: string;
-  Atributo5: string;
-  typeSolicitação: string;
 }
 
-interface Colaborador {
+interface Despesa {
   id: number;
-  nome: string;
-  data_nascimento: string;
-  telefone: string;
-  cpf: string;
-  genero: string;
+  valor: string;
+  descricao: string;
 }
 
-const List: React.FC<Props> = ({ Atributo1, Atributo2, Atributo3, Atributo4, Atributo5, typeSolicitação }) => {
-  const [colaboradores, setColaboradores] = useState<Colaborador[]>([]);
+const ListDespesas: React.FC<Props> = ({ Atributo1, Atributo2, Atributo3 }) => {
+  const [colaboradores, setColaboradores] = useState<Despesa[]>([]);
 
   useEffect(() => {
     const fetchColaboradores = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/colaborador/listar');
+        const response = await axios.get('http://localhost:3001/despesa/listar');
         setColaboradores(response.data);
       } catch (error) {
         console.error('Erro ao buscar colaboradores:', error);
@@ -43,17 +37,13 @@ const List: React.FC<Props> = ({ Atributo1, Atributo2, Atributo3, Atributo4, Atr
           <li style={{ width: '20%' }}>{Atributo1}</li>
           <li style={{ width: '20%' }}>{Atributo2}</li>
           <li style={{ width: '20%' }}>{Atributo3}</li>
-          <li style={{ width: '20%' }}>{Atributo4}</li>
-          <li style={{ width: '20%' }}>{Atributo5}</li>
         </ul>
 
         {colaboradores.map((item) => (
           <ul key={item.id} className={styles.list_dados_map}>
             <li style={{ width: '20%' }}>{item.id}</li>
-            <li style={{ width: '20%' }}>{item.nome}</li>
-            <li style={{ width: '20%' }}>{item.cargo}</li>
-            <li style={{ width: '20%' }}>{item.funcao}</li>
-            <li style={{ width: '20%' }}>{item.genero}</li>
+            <li style={{ width: '20%' }}>{item.valor}</li>
+            <li style={{ width: '20%' }}>{item.descricao}</li>
           </ul>
         ))}
       </div>
@@ -61,4 +51,4 @@ const List: React.FC<Props> = ({ Atributo1, Atributo2, Atributo3, Atributo4, Atr
   );
 };
 
-export default List;
+export default ListDespesas;
