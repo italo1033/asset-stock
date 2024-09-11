@@ -72,7 +72,7 @@ const ChartServices: React.FC<any> = () => {
     {
       name: 'Despesa',
       type: 'column',
-      data: valorMes,
+      data: [10000,5000 , 6500, 2500, 3000, 4500, 8000, 13000, 7000,1000,2000,10000],
     },
   ];
 
