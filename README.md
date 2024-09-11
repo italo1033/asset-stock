@@ -26,8 +26,7 @@ Tecnologias Utilizadas
 
     Frontend: Next.js, React, CSS Modules, etc.
     Backend: Node.js, Express (se aplicável).
-    Banco de Dados: (Indique o banco de dados utilizado, ex: MongoDB, PostgreSQL)
-    Outras Ferramentas: (Adicione qualquer outra ferramenta ou biblioteca relevante, como Tailwind CSS, Axios, etc.)
+    Banco de Dados: MySQL
 
 Instalação e Execução
 
