@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Asset-stock
 
-## Getting Started
+Este é um projeto de sistema de HelpDesk desenvolvido utilizando Next.js.
+Sumário
 
-First, run the development server:
+    Visão Geral
+    Funcionalidades
+    Tecnologias Utilizadas
+    Instalação e Execução
+    Scripts Disponíveis
+    Como Contribuir
+    Licença
 
-```bash
+Visão Geral
+
+Este projeto faz parte de um exercício de programação web. O sistema de Asset-stock é responsável por gerenciar o cadastro de colaboradores, controle de estoque, despesas, e serviços oferecidos pela equipe de suporte.
+
+Funcionalidades
+
+    Cadastro de Colaboradores: Gerenciamento de informações de colaboradores.
+    Controle de Estoque: Administração de itens de estoque, incluindo adição, edição e remoção de produtos.
+    Gestão de Despesas: Registro e acompanhamento de despesas.
+    Serviços: Controle de serviços prestados, incluindo abertura e fechamento de chamados.
+
+Tecnologias Utilizadas
+
+    Frontend: Next.js, React, CSS Modules, etc.
+    Backend: Node.js, Express (se aplicável).
+    Banco de Dados: MySQL
+
+Instalação e Execução
+
+Para iniciar o servidor de desenvolvimento, execute os seguintes comandos:
+
+bash
+
+npm install
 npm run dev
-# or
+# ou
+yarn install
 yarn dev
-# or
+# ou
+pnpm install
 pnpm dev
-# or
+# ou
+bun install
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra http://localhost:3000 no seu navegador para visualizar o projeto.
+Scripts Disponíveis
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+    dev: Inicia o servidor de desenvolvimento.
+    build: Gera a versão de produção da aplicação.
+    start: Inicia o servidor com a versão de produção.
+    lint: Verifica possíveis erros de lint no código.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Como Contribuir
 
-## Learn More
+    Faça um fork do projeto.
+    Crie uma nova branch (git checkout -b feature/sua-feature).
+    Realize suas alterações e faça commits (git commit -m 'Adiciona nova funcionalidade').
+    Envie para o branch original (git push origin feature/sua-feature).
+    Abra um Pull Request.
 
-To learn more about Next.js, take a look at the following resources:
+Licença
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
