@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './sidebar.module.css';
 import MenuItem from './menuItem';
+import Logo from '@/app/image/svg/logo';
 
 interface ButtonComponentProps {
   onButtonClickSidebar: (item: string) => void;
@@ -19,7 +20,7 @@ const Sidebar: React.FC<ButtonComponentProps> = ({ onButtonClickSidebar }) => {
   return (
     <div className={styles.sidebar}>
       <header className={styles.sidebarheader}>
-        Asset Stock
+        <Logo width={200}  />
       </header>
 
       <menu className={styles.sidebarmenu}>
