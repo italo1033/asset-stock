@@ -4,8 +4,8 @@ import axios from 'axios';
 
 interface Estoque {
   id: number;
-  valor: string;
-  descricao: string;
+  equipamento: string;
+  quantidade: string;
 }
 
 const ListEstoque: React.FC<any> = () => {
@@ -29,15 +29,15 @@ const ListEstoque: React.FC<any> = () => {
       <div className={styles.dados}>
         <ul className={styles.list_dados}>
           <li style={{ width: '20%' }}>id</li>
-          <li style={{ width: '20%' }}>valor</li>
-          <li style={{ width: '20%' }}>Descrição</li>
+          <li style={{ width: '20%' }}>Equipamento</li>
+          <li style={{ width: '20%' }}>Quantidade</li>
         </ul>
 
         {Estoque.map((item) => (
           <ul key={item.id} className={styles.list_dados_map}>
             <li style={{ width: '20%' }}>{item.id}</li>
-            <li style={{ width: '20%' }}>{item.valor}</li>
-            <li style={{ width: '20%' }}>{item.descricao}</li>
+            <li style={{ width: '20%' }}>{item.equipamento}</li>
+            <li style={{ width: '20%' }}>{item.quantidade}</li>
           </ul>
         ))}
       </div>
