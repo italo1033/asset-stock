@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/bootstrap": "^5.2.10",
+    "@types/jquery": "^3.5.30",
     "apexcharts": "^3.53.0",
     "axios": "^1.7.7",
+    "bootstrap": "^5.3.3",
     "chart.js": "^4.4.4",
+    "jquery": "^3.7.1",
     "next": "14.2.7",
     "react": "^18",
     "react-apexcharts": "^1.4.1",
