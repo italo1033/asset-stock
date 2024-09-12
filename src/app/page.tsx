@@ -10,7 +10,7 @@ import ListDespesas from './page/List/ListDespesas';
 import UserRegistrationPage from './page/ColabRegister/UserRegistrationPage';
 import EquipmentRegistrationPage from './page/EquipmentRegister/EquipmenttRegisterPage';
 import ExpenseRegistrationPage from './page/DespesaRegister/ExpenseRegistrationPage';
-import ListEquipamento from './page/List/ListEquipamento';
+import ListEstoque from './page/List/ListEstoque';
 
 export default function Home() {
   const [currentComponent, setCurrentComponent] = useState<string | null>(null);
@@ -26,7 +26,7 @@ export default function Home() {
       case 'Despesas':
         return <ListDespesas />;
       case 'Equipamentos':
-        return <ListEquipamento />;
+        return <ListEstoque />;
       case 'Adicionar Colaborador':
            return <UserRegistrationPage />;
       case 'Adicionar Equipamento':

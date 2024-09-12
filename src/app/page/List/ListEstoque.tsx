@@ -2,26 +2,26 @@ import styles from './list.module.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-interface Despesa {
+interface Estoque {
   id: number;
   valor: string;
   descricao: string;
 }
 
-const ListDespesas: React.FC<any> = () => {
-  const [Despesa, setDespesa] = useState<Despesa[]>([]);
+const ListEstoque: React.FC<any> = () => {
+  const [Estoque, setEstoque] = useState<Estoque[]>([]);
 
   useEffect(() => {
-    const fetchDespesa = async () => {
+    const fetchEstoque = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/despesa/listar');
-        setDespesa(response.data);
+        const response = await axios.get('http://localhost:3001/estoque/listar');
+        setEstoque(response.data);
       } catch (error) {
-        console.error('Erro ao buscar Despesa:', error);
+        console.error('Erro ao buscar Estoque:', error);
       }
     };
 
-    fetchDespesa();
+    fetchEstoque();
   }, []);
 
   return (
@@ -33,7 +33,7 @@ const ListDespesas: React.FC<any> = () => {
           <li style={{ width: '20%' }}>Descrição</li>
         </ul>
 
-        {Despesa.map((item) => (
+        {Estoque.map((item) => (
           <ul key={item.id} className={styles.list_dados_map}>
             <li style={{ width: '20%' }}>{item.id}</li>
             <li style={{ width: '20%' }}>{item.valor}</li>
@@ -45,4 +45,4 @@ const ListDespesas: React.FC<any> = () => {
   );
 };
 
-export default ListDespesas;
+export default ListEstoque;
