@@ -8,7 +8,7 @@ interface Despesa {
   descricao: string;
 }
 
-const ListDespesas: React.FC<any> = () => {
+const ListEquipamento: React.FC<any> = () => {
   const [colaboradores, setColaboradores] = useState<Despesa[]>([]);
 
   useEffect(() => {
@@ -45,4 +45,4 @@ const ListDespesas: React.FC<any> = () => {
   );
 };
 
-export default ListDespesas;
+export default ListEquipamento;

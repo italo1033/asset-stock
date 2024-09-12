@@ -2,15 +2,6 @@ import styles from './list.module.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-interface Props {
-  Atributo1: string;
-  Atributo2: string;
-  Atributo3: string;
-  Atributo4: string;
-  Atributo5: string;
-  typeSolicitação: string;
-}
-
 interface Colaborador {
   id: number;
   nome: string;
@@ -20,7 +11,7 @@ interface Colaborador {
   genero: string;
 }
 
-const ListColaboradores: React.FC<Props> = ({ Atributo1, Atributo2, Atributo3, Atributo4, Atributo5, typeSolicitação }) => {
+const ListColaboradores: React.FC<any> = () => {
   const [colaboradores, setColaboradores] = useState<Colaborador[]>([]);
 
   useEffect(() => {
@@ -40,11 +31,11 @@ const ListColaboradores: React.FC<Props> = ({ Atributo1, Atributo2, Atributo3, A
     <section className={styles.containerList}>
       <div className={styles.dados}>
         <ul className={styles.list_dados}>
-          <li style={{ width: '20%' }}>{Atributo1}</li>
-          <li style={{ width: '20%' }}>{Atributo2}</li>
-          <li style={{ width: '20%' }}>{Atributo3}</li>
-          <li style={{ width: '20%' }}>{Atributo4}</li>
-          <li style={{ width: '20%' }}>{Atributo5}</li>
+          <li style={{ width: '20%' }}>id</li>
+          <li style={{ width: '20%' }}>nome</li>
+          <li style={{ width: '20%' }}>Função</li>
+          <li style={{ width: '20%' }}>Cargo</li>
+          <li style={{ width: '20%' }}>Gênero</li>
         </ul>
 
         {colaboradores.map((item) => (
