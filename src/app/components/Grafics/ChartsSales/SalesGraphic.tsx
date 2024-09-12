@@ -20,7 +20,7 @@ export default function SalesGraphic({ Profit, Expanse }: { Profit: number; Expa
   };
 
   const options = {
-    cutout: "70%",
+    cutout: "90%",
     plugins: {
       legend: {
         display: false, 
