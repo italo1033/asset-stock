@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './lastExpenses.module.css';
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
 interface LastExpensesProps {
-    onViewAllExpenses: () => void; // Função de callback para mudar o componente
+    onViewAllExpenses: () => void;
   }
 
 const LastExpenses: React.FC<LastExpensesProps> = ({ onViewAllExpenses }) => {
