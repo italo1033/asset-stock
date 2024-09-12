@@ -24,6 +24,11 @@
     color: #000;
     list-style-type: none;
   }
+
+  .add{
+    display: flex;
+    justify-content: end;
+  }
   
   .list_dados_map {
     display: flex;
@@ -34,3 +39,5 @@
     list-style-type: none;
     border-bottom: #dddee1 0.5px solid ;
   }
+
+  

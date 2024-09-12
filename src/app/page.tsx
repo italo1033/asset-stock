@@ -5,13 +5,13 @@ import Sidebar from './components/Sidbar/sidbar';
 import Navbar from './components/Navbar/navbar';
 import Dashboard from './page/dashboard/dashboard';
 import ListColaboradores from './page/List/ListColaboradores';
-import LastExpenses from './components/LastExpenses/lastExpenses';
 import ListDespesas from './page/List/ListDespesas';
 import UserRegistrationPage from './page/ColabRegister/UserRegistrationPage';
 import EquipmentRegistrationPage from './page/EquipmentRegister/EquipmenttRegisterPage';
 import ExpenseRegistrationPage from './page/DespesaRegister/ExpenseRegistrationPage';
 import ListEstoque from './page/List/ListEstoque';
 import ListServicos from './page/List/ListServicos';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home() {
   const [currentComponent, setCurrentComponent] = useState<string | null>(null);
