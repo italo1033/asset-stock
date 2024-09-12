@@ -8,33 +8,31 @@ import ListColaboradores from './page/List/ListColaboradores';
 import LastExpenses from './components/LastExpenses/lastExpenses';
 import ListDespesas from './page/List/ListDespesas';
 import UserRegistrationPage from './page/ColabRegister/UserRegistrationPage';
+import EquipmentRegistrationPage from './page/EquipmentRegister/EquipmenttRegisterPage';
+import ExpenseRegistrationPage from './page/DespesaRegister/ExpenseRegistrationPage';
+import ListEquipamento from './page/List/ListEquipamento';
 
 export default function Home() {
   const [currentComponent, setCurrentComponent] = useState<string | null>(null);
 
   const handleViewAllExpenses = () => {
-    setCurrentComponent('Todas Despesas');
+    setCurrentComponent('Despesas');
   };
 
   const renderComponent = () => {
     switch (currentComponent) {
-      case 'Lista de Colaboradores':
-        return <ListColaboradores
-                Atributo1="Id"
-                Atributo2="Nome"
-                Atributo3="Cargo"
-                Atributo4="Função"
-                Atributo5="Equipamento"
-                typeSolicitação="colaboradores"
-                />;
-      case 'Todas Despesas':
-        return <ListDespesas 
-        Atributo1="Id"
-        Atributo2="valor"
-        Atributo3="descricao" />;
-
+      case 'Colaboradores':
+        return <ListColaboradores />;
+      case 'Despesas':
+        return <ListDespesas />;
+      case 'Equipamentos':
+        return <ListEquipamento />;
       case 'Adicionar Colaborador':
-        return <UserRegistrationPage />;
+           return <UserRegistrationPage />;
+      case 'Adicionar Equipamento':
+            return <EquipmentRegistrationPage/>;
+      case 'Adicionar Despesas':
+            return <ExpenseRegistrationPage />;
       default:
         return <Dashboard onButtonClickDespesa={handleViewAllExpenses} />;
     }
