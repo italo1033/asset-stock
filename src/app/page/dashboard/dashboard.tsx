@@ -35,7 +35,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onButtonClickDespesa }) => {
       <div className={styles.containerfinal}>
         <div className={styles.item1}><ChartServices /> </div>
         <div className={styles.item2}>
-          <LastExpenses onViewAllExpenses={() => onButtonClickDespesa('Todas Despesas')} />
+          <LastExpenses onViewAllExpenses={() => onButtonClickDespesa('Despesas')} />
         </div>
       </div>
     </section>
