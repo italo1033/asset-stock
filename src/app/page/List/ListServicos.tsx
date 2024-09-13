@@ -70,7 +70,7 @@ const ListServicos: React.FC = () => {
         ))}
       </div>
 
-      <ModalRegister show={showModal} onHide={handleClose} componentType="Colaboradores" />
+      <ModalRegister show={showModal} onHide={handleClose} componentType="Servico" />
     </section>
   );
 };
