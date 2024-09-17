@@ -58,7 +58,7 @@ const ListDespesas: React.FC<any> = () => {
         {Despesa.map((item) => (
           <ul key={item.id} className={styles.list_dados_map}>
             <li style={{ width: '20%' }}>{item.id}</li>
-            <li style={{ width: '20%' }}>{item.valor}</li>
+            <li style={{ width: '20%' }}>R${item.valor}</li>
             <li style={{ width: '20%' }}>{item.descricao}</li>
             <li style={{ width: '20%' }}><FaEdit /></li>
             <li style={{ width: '20%' }}><RiDeleteBin5Fill color='red' onClick={() => deleteItem(item.id)} /></li>
