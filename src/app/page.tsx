@@ -11,7 +11,6 @@ import EquipmentRegistrationPage from './page/EquipmentRegister/EquipmenttRegist
 import ExpenseRegistrationPage from './page/DespesaRegister/ExpenseRegistrationPage';
 import ListEstoque from './page/List/ListEstoque';
 import ListServicos from './page/List/ListServicos';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home() {
   const [currentComponent, setCurrentComponent] = useState<string | null>(null);
