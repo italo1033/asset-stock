@@ -1,14 +1,9 @@
 .container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;display: flex;
+    justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para efeito de modal */
-    z-index: 1000; /* Certifique-se de que o modal esteja sobreposto a outros conteúdos */
   }
   
   .contentWrapper {
