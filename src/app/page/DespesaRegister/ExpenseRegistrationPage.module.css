@@ -82,3 +82,21 @@
     background-color: #005bb5;
   }
   
+  .input,
+  .select,
+  .textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .input:focus,
+  .select:focus,
+  .textarea:focus {
+    border-color: #0070f3;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2);
+  }
