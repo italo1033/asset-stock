@@ -57,7 +57,7 @@ export default function UserRegistrationPage() {
                 value="Masculino"
                 className={styles.radio}
               />
-              <label htmlFor="masculino" className={styles.genderLabel}>
+              <label htmlFor="masculino" style={{marginLeft:5}} className={styles.genderLabel}>
                 Masculino
               </label>
             </div>
@@ -69,7 +69,7 @@ export default function UserRegistrationPage() {
                 value="Feminino"
                 className={styles.radio}
               />
-              <label htmlFor="feminino" className={styles.genderLabel}>
+              <label htmlFor="feminino"  style={{marginLeft:5}} className={styles.genderLabel}>
                 Feminino
               </label>
             </div>
