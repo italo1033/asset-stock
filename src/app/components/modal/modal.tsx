@@ -5,11 +5,12 @@ import EquipmentRegistrationPage from '@/app/page/EquipmentRegister/EquipmenttRe
 import Modal from 'react-bootstrap/Modal';
 import styles from './modal.module.css'
 import ServiceOrderRegistrationPage from '@/app/page/ServiceOrder/ServiceOrderRegistrationPage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 interface ModalRegisterProps {
   onHide: () => void; 
   show: boolean; 
-  componentType?: 'Colaboradores' | 'Servico' | 'Estoque' | 'Equipamento'; 
+  componentType?: 'Colaboradores' | 'Servico' | 'Estoque' | 'Equipamento' | 'Despesa'; 
 }
 
 const ModalRegister: React.FC<ModalRegisterProps> = ({ onHide, show, componentType }) => {
@@ -23,6 +24,8 @@ switch (componentType) {
         return <EquipmentRegistrationPage />;
     case 'Servico':
         return <ServiceOrderRegistrationPage />
+      case 'Despesa':
+        return <ExpenseRegistrationPage />;
 
     }
   };
