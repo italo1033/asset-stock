@@ -8,7 +8,7 @@ import ModalRegister from '@/app/components/modal/modal';
 
 interface Servicos {
   id: number;
-  servico: string;
+  descricao: string;
   id_usuario: string;
   id_Status: string;
 }
@@ -50,8 +50,8 @@ const ListServicos: React.FC = () => {
         </div>
 
         <ul className={styles.list_dados}>
-          <li style={{ width: '20%' }}>id</li>
-          <li style={{ width: '20%' }}>Serviços</li>
+          <li style={{ width: '5%' }}>id</li>
+          <li style={{ width: '35%' }}>Serviços</li>
           <li style={{ width: '20%' }}>Responsável</li>
           <li style={{ width: '20%' }}>Status</li>
           <li style={{ width: '20%' }}></li>
@@ -60,10 +60,10 @@ const ListServicos: React.FC = () => {
 
         {Servicos.map((item) => (
           <ul key={item.id} className={styles.list_dados_map}>
-            <li style={{ width: '20%' }}>{item.id}</li>
-            <li style={{ width: '20%' }}>{item.servico}</li>
-            <li style={{ width: '20%' }}>{item.id_usuario}</li>
-            <li style={{ width: '20%' }}>{item.id_Status}</li>
+            <li style={{ width: '5%' }}>{item.id}</li>
+            <li style={{ width: '35%' }}>{item.descricao}</li>
+            <li style={{ width: '20%' }}>{item.id_usuario ==  '1' ? 'Italo':'tanyse'}</li>
+            <li style={{ width: '20%' }}>{item.id_Status ==  '1' ? 'aberto':'fechado'}</li>
             <li style={{ width: '20%' }}><FaEdit /></li>
             <li style={{ width: '20%' }}><RiDeleteBin5Fill color='red' onClick={() => deleteItem(item.id)} /></li>
           </ul>
