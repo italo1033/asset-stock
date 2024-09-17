@@ -38,6 +38,7 @@ switch (componentType) {
       className={styles.modalBody}
       backdrop={true}  
       keyboard={true}
+      centered
     >
         {renderComponent()}
     </Modal>
