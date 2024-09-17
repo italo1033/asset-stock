@@ -19,8 +19,6 @@ switch (componentType) {
     case 'Colaboradores':
         return <UserRegistrationPage />;
     case 'Estoque':
-        return <ExpenseRegistrationPage />;
-    case 'Equipamento':
         return <EquipmentRegistrationPage />;
     case 'Servico':
         return <ServiceOrderRegistrationPage />
