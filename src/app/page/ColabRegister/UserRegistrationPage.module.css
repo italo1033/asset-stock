@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
   }
+
   
   /* Wrapper do Conteúdo */
   .contentWrapper {
@@ -73,8 +74,9 @@
   /* Gênero - Opções de Radio */
   .genderContainer {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     margin-bottom: 16px;
+    margin-left:0.2rem;
   }
   
   .genderOption {
@@ -84,7 +86,6 @@
   .genderLabel {
     font-size: 14px;
     color: #333;
-    margin-left: 4px;
   }
   
   /* Botão */
