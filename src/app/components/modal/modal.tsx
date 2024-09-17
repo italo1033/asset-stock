@@ -6,6 +6,7 @@ import Modal from 'react-bootstrap/Modal';
 import styles from './modal.module.css'
 import ServiceOrderRegistrationPage from '@/app/page/ServiceOrder/ServiceOrderRegistrationPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import StockRegistrationPage from '@/app/page/StockRegister/StockRegistrationPage';
 
 interface ModalRegisterProps {
   onHide: () => void; 
@@ -33,6 +34,9 @@ switch (componentType) {
       show={show}
       onHide={onHide}
       className={styles.modalBody}
+      backdrop={true}  
+      keyboard={true}
+      centered
     >
         {renderComponent()}
     </Modal>
