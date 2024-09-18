@@ -1,18 +1,32 @@
-// Dashboard.tsx
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './dashboard.module.css';
 import CardInfor from '@/app/components/Cardinfor/cardinfor';
 import LastExpenses from '@/app/components/LastExpenses/lastExpenses';
 import ChartServices from '@/app/components/Grafics/GraficServices/graficServices';
 import SalesGraphic from '@/app/components/Grafics/ChartsSales/SalesGraphic';
 import RadialBarChart from '@/app/components/Grafics/ChartUptime/chartUptime';
-import { uptime } from 'process';
 
 interface DashboardProps {
   onButtonClickDespesa: (item: string) => void;
 }
 
 const Dashboard: React.FC<DashboardProps> = ({ onButtonClickDespesa }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const loadComponents = async () => {
+      setTimeout(() => {
+        setIsLoaded(true);
+      }, 1000);
+    };
+
+    loadComponents();
+  }, []);
+
+  if (!isLoaded) {
+    return <div className={styles.loading}>Carregando...</div>;
+  }
+
   return (
     <section className={styles.dashboard}>
       <div className={styles.dashboardMetas}>

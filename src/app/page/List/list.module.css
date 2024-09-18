@@ -2,8 +2,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #F5F5F5;
-    height: 100vh;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     
 }
 
