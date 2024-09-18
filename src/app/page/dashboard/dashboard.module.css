@@ -18,8 +18,8 @@
     gap:  1.48rem;;
 }
 
-/* Estilo do fundo animado */
 .dashboardMetas {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     background: linear-gradient(45deg, #026df7, #4a9dff, #7ab7ff, #a5d0ff, #cce4ff, #fff);
     background-size: 600% 600%; /* Aumenta o tamanho do fundo */
     animation: gradientAnimation 15s linear infinite; /* Ajusta a função de tempo para linear */
@@ -36,6 +36,9 @@
     100% {
         background-position: 0% 0%;
     }
+}
+.border{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 .containersubcards{
     width: 100%;
@@ -68,11 +71,13 @@
     width: 66%;
     background-color: #fff;
     border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .item2{
     width: 31.9%;
     border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 

@@ -6,6 +6,7 @@ import LastExpenses from '@/app/components/LastExpenses/lastExpenses';
 import ChartServices from '@/app/components/Grafics/GraficServices/graficServices';
 import SalesGraphic from '@/app/components/Grafics/ChartsSales/SalesGraphic';
 import RadialBarChart from '@/app/components/Grafics/ChartUptime/chartUptime';
+import { uptime } from 'process';
 
 interface DashboardProps {
   onButtonClickDespesa: (item: string) => void;
@@ -23,13 +24,13 @@ const Dashboard: React.FC<DashboardProps> = ({ onButtonClickDespesa }) => {
       </div>
 
       <div className={styles.containersubcards}>
-        <div>
+        <div className={styles.border}>
           <RadialBarChart />
         </div>
         <div>
           <SalesGraphic Profit={100} Expanse={100} />
         </div>
-        <div>2</div>
+        <div className={styles.border}>2</div>
       </div>
 
       <div className={styles.containerfinal}>
