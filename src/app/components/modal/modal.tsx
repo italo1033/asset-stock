@@ -11,7 +11,7 @@ import StockRegistrationPage from '@/app/page/StockRegister/StockRegistrationPag
 interface ModalRegisterProps {
   onHide: () => void; 
   show: boolean; 
-  componentType?: 'Colaboradores' | 'Servico' | 'Estoque' | 'Equipamento' | 'Despesa'; 
+  componentType?: 'Colaboradores' | 'Servico' | 'Equipamento' | 'Despesa'; 
 }
 
 const ModalRegister: React.FC<ModalRegisterProps> = ({ onHide, show, componentType }) => {
@@ -19,7 +19,7 @@ const ModalRegister: React.FC<ModalRegisterProps> = ({ onHide, show, componentTy
 switch (componentType) {
     case 'Colaboradores':
         return <UserRegistrationPage />;
-    case 'Estoque':
+    case 'Equipamento':
         return <EquipmentRegistrationPage />;
     case 'Servico':
         return <ServiceOrderRegistrationPage />
