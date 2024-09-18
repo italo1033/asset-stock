@@ -8,8 +8,9 @@ import ModalRegister from '@/app/components/modal/modal';
 
 interface Estoque {
   id: number;
-  equipamento: string;
-  quantidade: string;
+  descricao: string;
+  valor_de_compra: string;
+  data_compra: string;
 }
 
 const ListEstoque: React.FC<any> = () => {
@@ -22,7 +23,7 @@ const ListEstoque: React.FC<any> = () => {
   useEffect(() => {
     const fetchEstoque = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/estoque/listar');
+        const response = await axios.get('http://localhost:3001/equipamentos/listar');
         setEstoque(response.data);
       } catch (error) {
         console.error('Erro ao buscar Estoque:', error);
@@ -34,7 +35,7 @@ const ListEstoque: React.FC<any> = () => {
 
   const deleteItem = async (id: number) => {
     try {
-      await axios.delete(`http://localhost:3001/servicos/excluir/${id}`);
+      await axios.delete(`http://localhost:3001/equipamento/excluir/${id}`);
       setEstoque((prevEstoque) => prevEstoque.filter((item) => item.id !== id)); // Atualiza a lista após exclusão
     } catch (error) {
       console.error('Erro ao excluir o item:', error);
@@ -49,8 +50,9 @@ const ListEstoque: React.FC<any> = () => {
         </div>
         <ul className={styles.list_dados}>
           <li style={{ width: '20%' }}>id</li>
-          <li style={{ width: '20%' }}>Equipamentow</li>
-          <li style={{ width: '20%' }}>Quantidade</li>
+          <li style={{ width: '20%' }}>Equipamento</li>
+          <li style={{ width: '20%' }}>Valor</li>
+          <li style={{ width: '20%' }}>Data de Compra</li>
           <li style={{ width: '20%' }}></li>
           <li style={{ width: '20%' }}></li>
         </ul>
@@ -58,14 +60,15 @@ const ListEstoque: React.FC<any> = () => {
         {Estoque.map((item) => (
           <ul key={item.id} className={styles.list_dados_map}>
             <li style={{ width: '20%' }}>{item.id}</li>
-            <li style={{ width: '20%' }}>{item.equipamento}</li>
-            <li style={{ width: '20%' }}>{item.quantidade}</li>
+            <li style={{ width: '20%' }}>{item.descricao}</li>
+            <li style={{ width: '20%' }}>R${item.valor_de_compra}</li>
+            <li style={{ width: '20%' }}>{item.data_compra}</li>
             <li style={{ width: '20%' }}><FaEdit /></li>
             <li style={{ width: '20%' }}><RiDeleteBin5Fill color='red' onClick={() => deleteItem(item.id)} /></li>
           </ul>
         ))}
       </div>
-      <ModalRegister show={showModal} onHide={handleClose} componentType="Estoque" />
+      <ModalRegister show={showModal} onHide={handleClose} componentType="Equipamento" />
     </section>
   );
 };
