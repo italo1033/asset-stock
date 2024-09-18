@@ -1,13 +1,72 @@
+import React, { useState, ChangeEvent, FormEvent } from 'react';
+import styles from './UserRegistrationPage.module.css';
 
+interface FormData {
+  nome: string;
+  data_nascimento: string;
+  genero: string;
+  cpf: string;
+  telefone: string;
+  cargo: string;
+  funcao: string;
+}
 
-import React from "react";
-import styles from "./UserRegistrationPage.module.css"; 
+const UserRegistrationPage: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
+    nome: '',
+    data_nascimento: '',
+    genero: '',
+    cpf: '',
+    telefone: '',
+    cargo: '',
+    funcao: '',
+  });
 
-export default function UserRegistrationPage() {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prevData => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('http://localhost:3001/colaborador/adicionar', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (!response.ok) {
+        throw new Error('Erro ao enviar dados');
+      }
+
+      const result = await response.json();
+      console.log('Colaborador registrado com sucesso:', result);
+      // Optionally, reset the form or show a success message
+      setFormData({
+        nome: '',
+        data_nascimento: '',
+        genero: '',
+        cpf: '',
+        telefone: '',
+        cargo: '',
+        funcao: '',
+      });
+    } catch (error) {
+      console.error('Erro:', error);
+    }
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.contentWrapper}>
-        <form className={styles.form}>
+        <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.header}>
             <h3 className={styles.title}>Colaborador</h3>
             <p className={styles.subtitle}>
@@ -18,32 +77,24 @@ export default function UserRegistrationPage() {
           <div className={styles.inputGroup}>
             <label className={styles.label}>Nome</label>
             <input
-              name="firstName"
+              name="nome"
               type="text"
               required
               className={styles.input}
               placeholder="Digite seu nome"
+              value={formData.nome}
+              onChange={handleChange}
             />
           </div>
-
-          <div className={styles.inputGroup}>
-            <label className={styles.label}>Sobrenome</label>
-            <input
-              name="lastName"
-              type="text"
-              required
-              className={styles.input}
-              placeholder="Digite seu sobrenome"
-            />
-          </div>
-
           <div className={styles.inputGroup}>
             <label className={styles.label}>Data de Nascimento</label>
             <input
-              name="birthday"
+              name="data_nascimento"
               type="date"
               required
               className={styles.input}
+              value={formData.data_nascimento}
+              onChange={handleChange}
             />
           </div>
 
@@ -53,11 +104,13 @@ export default function UserRegistrationPage() {
               <input
                 type="radio"
                 id="masculino"
-                name="gender"
+                name="genero"
                 value="Masculino"
                 className={styles.radio}
+                checked={formData.genero === 'Masculino'}
+                onChange={handleChange}
               />
-              <label htmlFor="masculino" style={{marginLeft:5}} className={styles.genderLabel}>
+              <label htmlFor="masculino" style={{ marginLeft: 5 }} className={styles.genderLabel}>
                 Masculino
               </label>
             </div>
@@ -65,114 +118,44 @@ export default function UserRegistrationPage() {
               <input
                 type="radio"
                 id="feminino"
-                name="gender"
+                name="genero"
                 value="Feminino"
                 className={styles.radio}
+                checked={formData.genero === 'Feminino'}
+                onChange={handleChange}
               />
-              <label htmlFor="feminino"  style={{marginLeft:5}} className={styles.genderLabel}>
+              <label htmlFor="feminino" style={{ marginLeft: 5 }} className={styles.genderLabel}>
                 Feminino
               </label>
             </div>
           </div>
 
           <div className={styles.inputGroup}>
-            <label className={styles.label}>Email</label>
+            <label className={styles.label}>CPF</label>
             <input
-              name="email"
-              type="email"
+              name="cpf"
+              type="text"
               required
               className={styles.input}
-              placeholder="Digite seu email"
+              placeholder="Digite seu CPF"
+              value={formData.cpf}
+              onChange={handleChange}
             />
           </div>
 
           <div className={styles.inputGroup}>
             <label className={styles.label}>Telefone</label>
             <input
-              name="phone"
+              name="telefone"
               type="tel"
               required
               className={styles.input}
               placeholder="Digite seu telefone"
+              value={formData.telefone}
+              onChange={handleChange}
             />
           </div>
 
-          <div className={styles.inputGroup}>
-            <label className={styles.label}>CPF/CNPJ</label>
-            <input
-              name="cpfCnpj"
-              type="text"
-              required
-              className={styles.input}
-              placeholder="Digite seu CPF"
-            />
-          </div>
-
-          <div className={styles.inputGroup}>
-            <label className={styles.label}>Endereço</label>
-            <input
-              name="endereco"
-              type="text"
-              required
-              className={styles.input}
-              placeholder="Digite seu endereço"
-            />
-          </div>
-
-          <div className={styles.inputGroup}>
-            <label className={styles.label}>Número</label>
-            <input
-              name="numero"
-              type="text"
-              required
-              className={styles.input}
-              placeholder="Digite o número"
-            />
-          </div>
-
-          <div className={styles.inputGroup}>
-            <label className={styles.label}>Bairro</label>
-            <input
-              name="bairro"
-              type="text"
-              required
-              className={styles.input}
-              placeholder="Digite seu bairro"
-            />
-          </div>
-
-          <div className={styles.inputGroup}>
-            <label className={styles.label}>Cidade</label>
-            <input
-              name="cidade"
-              type="text"
-              required
-              className={styles.input}
-              placeholder="Digite sua cidade"
-            />
-          </div>
-
-          <div className={styles.inputGroup}>
-            <label className={styles.label}>Estado</label>
-            <input
-              name="estado"
-              type="text"
-              required
-              className={styles.input}
-              placeholder="Digite seu estado"
-            />
-          </div>
-
-          <div className={styles.inputGroup}>
-            <label className={styles.label}>CEP</label>
-            <input
-              name="cep"
-              type="text"
-              required
-              className={styles.input}
-              placeholder="Digite seu CEP"
-            />
-          </div>
           <div className={styles.inputGroup}>
             <label className={styles.label}>Cargo</label>
             <input
@@ -181,21 +164,26 @@ export default function UserRegistrationPage() {
               required
               className={styles.input}
               placeholder="Digite seu cargo"
+              value={formData.cargo}
+              onChange={handleChange}
             />
           </div>
+
           <div className={styles.inputGroup}>
             <label className={styles.label}>Função</label>
             <input
-              name="função"
+              name="funcao"
               type="text"
               required
               className={styles.input}
-              placeholder="Digite seu função"
+              placeholder="Digite sua função"
+              value={formData.funcao}
+              onChange={handleChange}
             />
           </div>
 
           <div className={styles.buttonContainer}>
-            <button type="button" className={styles.button}>
+            <button type="submit" className={styles.button}>
               Registrar
             </button>
           </div>
@@ -203,4 +191,6 @@ export default function UserRegistrationPage() {
       </div>
     </div>
   );
-}
+};
+
+export default UserRegistrationPage;
