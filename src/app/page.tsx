@@ -25,16 +25,10 @@ export default function Home() {
         return <ListColaboradores />;
       case 'Despesas':
         return <ListDespesas />;
-      case 'Estoque':
+      case 'Equipamento':
         return <ListEstoque />;
       case 'Serviços':
         return <ListServicos />;
-      case 'Adicionar Colaborador':
-           return <UserRegistrationPage />;
-      case 'Adicionar Equipamento':
-            return <EquipmentRegistrationPage/>;
-      case 'Adicionar Despesas':
-            return <ExpenseRegistrationPage />;
       default:
         return <Dashboard onButtonClickDespesa={handleViewAllExpenses} />;
     }
