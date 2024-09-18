@@ -35,7 +35,7 @@ const ListEstoque: React.FC<any> = () => {
 
   const deleteItem = async (id: number) => {
     try {
-      await axios.delete(`http://localhost:3001/equipamento/excluir/${id}`);
+      await axios.delete(`http://localhost:3001/equipamentos/excluir/${id}`);
       setEstoque((prevEstoque) => prevEstoque.filter((item) => item.id !== id)); // Atualiza a lista após exclusão
     } catch (error) {
       console.error('Erro ao excluir o item:', error);
