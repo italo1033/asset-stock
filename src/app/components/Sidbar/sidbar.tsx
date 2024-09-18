@@ -32,9 +32,9 @@ const Sidebar: React.FC<ButtonComponentProps> = ({ onButtonClickSidebar }) => {
           <span>Colaboradores</span>
         </div>
 
-        <div className={styles.menuItem} onClick={() => handleButtonClick('Estoque')}>
+        <div className={styles.menuItem} onClick={() => handleButtonClick('Equipamento')}>
           <CgShutterstock />
-          <span>Estoque</span>
+          <span>Equipamento</span>
         </div>
 
         <div className={styles.menuItem} onClick={() => handleButtonClick('Despesas')}>
